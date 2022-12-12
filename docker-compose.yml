@@ -1,0 +1,53 @@
+version: "3.8"
+services:
+
+  crawler:
+    container_name: crawler
+    restart: always
+    image: crawler:1.0
+    command: bash -c "runner.py"
+    volumes:
+      - crawler_logger:/var/www/inquiries_logger/logs
+    ports:
+      - "8010:8010"
+    env_file:
+      - crawler.env
+
+  torob:
+    container_name: torob
+    restart: always
+    image: torob:1.0
+    command: bash -c "gunicorn torob.wsgi:application --bind 0.0.0.0:8011"
+    volumes:
+      - torob_logger:/var/www/torob/logs
+      - torob_static:/static
+    ports:
+      - "8011:8011"
+    env_file:
+      - torob.env
+  
+  postgres:
+    container_name: postgres
+    restart: always
+    image: postgres:latest
+    volumes:
+      - postgres_logger:/var/lib/postgresql
+    ports:
+      - "5432:5432"
+      
+  mongo:
+    container_name: mongo
+    restart: always
+    image: mongo:latest
+    volumes:
+      - mongo:/data/db
+    ports:
+      - "27017:27017"
+    
+volumes:
+    crawler_logger:
+    torob_logger:
+    postgres_logger:
+    mongo:
+    torob_static:
+

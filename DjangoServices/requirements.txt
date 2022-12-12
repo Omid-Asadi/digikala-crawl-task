@@ -1,0 +1,17 @@
+certifi==2022.12.7
+charset-normalizer==2.1.1
+Django==2.2
+django-filter==21.1
+django-jet==1.0.8
+djangorestframework==3.12.4
+dnspython==2.2.1
+idna==3.4
+Khayyam==3.0.17
+peewee==3.15.4
+psycopg2-binary==2.9.5
+pymongo==4.3.3
+pytz==2022.6
+requests==2.28.1
+sqlparse==0.4.3
+urllib3==1.26.13
+gunicorn==20.1.0

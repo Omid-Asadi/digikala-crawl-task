@@ -1,0 +1,981 @@
+{
+	"info": {
+		"_postman_id": "c440f2b6-8099-4c26-a5fe-2982183d1b6f",
+		"name": "Torob Django CRUD Services",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16011302"
+	},
+	"item": [
+		{
+			"name": "Shops",
+			"item": [
+				{
+					"name": "Get All Shops",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://0.0.0.0:8000/shop/shop-list/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8000",
+							"path": [
+								"shop",
+								"shop-list",
+								""
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "digikala",
+									"disabled": true
+								},
+								{
+									"key": "price",
+									"value": "5000",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Shops",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://0.0.0.0:8000/shop/shop-list/",
+									"protocol": "http",
+									"host": [
+										"0",
+										"0",
+										"0",
+										"0"
+									],
+									"port": "8000",
+									"path": [
+										"shop",
+										"shop-list",
+										""
+									],
+									"query": [
+										{
+											"key": "search",
+											"value": "digikala",
+											"disabled": true
+										},
+										{
+											"key": "price",
+											"value": "5000",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 10 Dec 2022 23:04:57 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.8.15"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Length",
+									"value": "708"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 7,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"pk\": 2,\n            \"jalali_created_time\": \"1401-09-19 08:09\",\n            \"name\": \"digikala\",\n            \"price\": 5000,\n            \"product\": 2\n        },\n        {\n            \"pk\": 4,\n            \"jalali_created_time\": \"1401-09-19 19:09\",\n            \"name\": \"digikala2\",\n            \"price\": 2500,\n            \"product\": 2\n        },\n        {\n            \"pk\": 5,\n            \"jalali_created_time\": \"1401-09-19 19:09\",\n            \"name\": \"digikala2\",\n            \"price\": 2500,\n            \"product\": 2\n        },\n        {\n            \"pk\": 6,\n            \"jalali_created_time\": \"1401-09-19 19:09\",\n            \"name\": \"digikala2\",\n            \"price\": 2500,\n            \"product\": 2\n        },\n        {\n            \"pk\": 7,\n            \"jalali_created_time\": \"1401-09-19 19:09\",\n            \"name\": \"digikala2\",\n            \"price\": 2500,\n            \"product\": 2\n        },\n        {\n            \"pk\": 8,\n            \"jalali_created_time\": \"1401-09-19 19:09\",\n            \"name\": \"digikala2\",\n            \"price\": 2500,\n            \"product\": 2\n        },\n        {\n            \"pk\": 9,\n            \"jalali_created_time\": \"1401-09-19 23:09\",\n            \"name\": \"digikala2\",\n            \"price\": 2500,\n            \"product\": 2\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Shop",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://0.0.0.0:8000/shop/shops/2/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8000",
+							"path": [
+								"shop",
+								"shops",
+								"2",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Link",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://0.0.0.0:8000/shop/shops/2/",
+									"protocol": "http",
+									"host": [
+										"0",
+										"0",
+										"0",
+										"0"
+									],
+									"port": "8000",
+									"path": [
+										"shop",
+										"shops",
+										"2",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 10 Dec 2022 23:05:02 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.8.15"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Length",
+									"value": "92"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"pk\": 2,\n    \"jalali_created_time\": \"1401-09-19 08:09\",\n    \"name\": \"digikala\",\n    \"price\": 5000,\n    \"product\": 2\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Shop",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"digikala2\",\n    \"price\": 2500,\n    \"product\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://0.0.0.0:8000/shop/shops/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8000",
+							"path": [
+								"shop",
+								"shops",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Shop",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"digikala2\",\n    \"price\": 2500,\n    \"product\": 2\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://0.0.0.0:8000/shop/shops/",
+									"protocol": "http",
+									"host": [
+										"0",
+										"0",
+										"0",
+										"0"
+									],
+									"port": "8000",
+									"path": [
+										"shop",
+										"shops",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 10 Dec 2022 23:05:10 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.8.15"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Length",
+									"value": "94"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"pk\": 10,\n    \"jalali_created_time\": \"1401-09-19 23:09\",\n    \"name\": \"digikala2\",\n    \"price\": 2500,\n    \"product\": 2\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Shop",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"test\",\n    \"price\": 5000,\n    \"product\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://0.0.0.0:8000/shop/shops/2/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8000",
+							"path": [
+								"shop",
+								"shops",
+								"2",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Link",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"test\",\n    \"price\": 5000,\n    \"product\": 2\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://0.0.0.0:8000/shop/shops/2/",
+									"protocol": "http",
+									"host": [
+										"0",
+										"0",
+										"0",
+										"0"
+									],
+									"port": "8000",
+									"path": [
+										"shop",
+										"shops",
+										"2",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 10 Dec 2022 23:05:38 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.8.15"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Length",
+									"value": "88"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"pk\": 2,\n    \"jalali_created_time\": \"1401-09-19 08:09\",\n    \"name\": \"test\",\n    \"price\": 5000,\n    \"product\": 2\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Shop",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://0.0.0.0:8000/shop/shops/7/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8000",
+							"path": [
+								"shop",
+								"shops",
+								"7",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Shop",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://0.0.0.0:8000/shop/shops/7/",
+									"protocol": "http",
+									"host": [
+										"0",
+										"0",
+										"0",
+										"0"
+									],
+									"port": "8000",
+									"path": [
+										"shop",
+										"shops",
+										"7",
+										""
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 10 Dec 2022 23:09:04 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.8.15"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Get All Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://0.0.0.0:8000/product/product-list/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8000",
+							"path": [
+								"product",
+								"product-list",
+								""
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "asus",
+									"disabled": true
+								},
+								{
+									"key": "capacity",
+									"value": "128",
+									"disabled": true
+								},
+								{
+									"key": "price",
+									"value": "5000",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Products",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://0.0.0.0:8000/product/product-list/?search=asus&capacity=128&price=5000",
+									"protocol": "http",
+									"host": [
+										"0",
+										"0",
+										"0",
+										"0"
+									],
+									"port": "8000",
+									"path": [
+										"product",
+										"product-list",
+										""
+									],
+									"query": [
+										{
+											"key": "search",
+											"value": "asus"
+										},
+										{
+											"key": "capacity",
+											"value": "128"
+										},
+										{
+											"key": "price",
+											"value": "5000"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 10 Dec 2022 23:11:05 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.8.15"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Length",
+									"value": "622"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 1,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"pk\": 2,\n            \"jalali_created_time\": \"1401-09-19 08:09\",\n            \"brand\": \"asus\",\n            \"price\": 123456,\n            \"capacity\": 128,\n            \"shops\": [\n                {\n                    \"pk\": 2,\n                    \"jalali_created_time\": \"1401-09-19 08:09\",\n                    \"name\": \"test\",\n                    \"price\": 5000,\n                    \"product\": 2\n                },\n                {\n                    \"pk\": 4,\n                    \"jalali_created_time\": \"1401-09-19 19:09\",\n                    \"name\": \"digikala2\",\n                    \"price\": 2500,\n                    \"product\": 2\n                },\n                {\n                    \"pk\": 5,\n                    \"jalali_created_time\": \"1401-09-19 19:09\",\n                    \"name\": \"digikala2\",\n                    \"price\": 2500,\n                    \"product\": 2\n                },\n                {\n                    \"pk\": 6,\n                    \"jalali_created_time\": \"1401-09-19 19:09\",\n                    \"name\": \"digikala2\",\n                    \"price\": 2500,\n                    \"product\": 2\n                },\n                {\n                    \"pk\": 10,\n                    \"jalali_created_time\": \"1401-09-19 23:09\",\n                    \"name\": \"digikala2\",\n                    \"price\": 2500,\n                    \"product\": 2\n                }\n            ]\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://0.0.0.0:8000/product/products/2/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8000",
+							"path": [
+								"product",
+								"products",
+								"2",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Product",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://0.0.0.0:8000/product/products/2/",
+									"protocol": "http",
+									"host": [
+										"0",
+										"0",
+										"0",
+										"0"
+									],
+									"port": "8000",
+									"path": [
+										"product",
+										"products",
+										"2",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 10 Dec 2022 23:11:13 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.8.15"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Length",
+									"value": "570"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"pk\": 2,\n    \"jalali_created_time\": \"1401-09-19 08:09\",\n    \"brand\": \"asus\",\n    \"price\": 123456,\n    \"capacity\": 128,\n    \"shops\": [\n        {\n            \"pk\": 2,\n            \"jalali_created_time\": \"1401-09-19 08:09\",\n            \"name\": \"test\",\n            \"price\": 5000,\n            \"product\": 2\n        },\n        {\n            \"pk\": 4,\n            \"jalali_created_time\": \"1401-09-19 19:09\",\n            \"name\": \"digikala2\",\n            \"price\": 2500,\n            \"product\": 2\n        },\n        {\n            \"pk\": 5,\n            \"jalali_created_time\": \"1401-09-19 19:09\",\n            \"name\": \"digikala2\",\n            \"price\": 2500,\n            \"product\": 2\n        },\n        {\n            \"pk\": 6,\n            \"jalali_created_time\": \"1401-09-19 19:09\",\n            \"name\": \"digikala2\",\n            \"price\": 2500,\n            \"product\": 2\n        },\n        {\n            \"pk\": 10,\n            \"jalali_created_time\": \"1401-09-19 23:09\",\n            \"name\": \"digikala2\",\n            \"price\": 2500,\n            \"product\": 2\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"brand\": \"asus\",\n    \"minimum_market_price\": 123456,\n    \"capacity\": 128,\n    \"shops\": [4, 5]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://0.0.0.0:8000/product/products/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8000",
+							"path": [
+								"product",
+								"products",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Product",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"brand\": \"asus\",\n    \"price\": 123456,\n    \"capacity\": 128,\n    \"shops\": [2, 4]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://0.0.0.0:8000/product/products/",
+									"protocol": "http",
+									"host": [
+										"0",
+										"0",
+										"0",
+										"0"
+									],
+									"port": "8000",
+									"path": [
+										"product",
+										"products",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 10 Dec 2022 23:18:49 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.8.15"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Length",
+									"value": "67"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"pk\": 8,\n    \"brand\": \"asus\",\n    \"price\": 123456,\n    \"capacity\": 128,\n    \"shops\": [\n        2,\n        4\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Product",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"brand\": \"asus\",\n    \"minimum_market_price\": 123456,\n    \"capacity\": 128,\n    \"shops\": [2, 4]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://0.0.0.0:8000/product/products/8/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8000",
+							"path": [
+								"product",
+								"products",
+								"8",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Product",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"brand\": \"asus\",\n    \"price\": 123456,\n    \"capacity\": 128,\n    \"shops\": [2, 4]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://0.0.0.0:8000/product/products/8/",
+									"protocol": "http",
+									"host": [
+										"0",
+										"0",
+										"0",
+										"0"
+									],
+									"port": "8000",
+									"path": [
+										"product",
+										"products",
+										"8",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 10 Dec 2022 23:23:31 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.8.15"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Length",
+									"value": "67"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"pk\": 8,\n    \"brand\": \"asus\",\n    \"price\": 123456,\n    \"capacity\": 128,\n    \"shops\": [\n        2,\n        4\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Product",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://0.0.0.0:8000/product/products/9/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8000",
+							"path": [
+								"product",
+								"products",
+								"9",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Product",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://0.0.0.0:8000/product/products/9/",
+									"protocol": "http",
+									"host": [
+										"0",
+										"0",
+										"0",
+										"0"
+									],
+									"port": "8000",
+									"path": [
+										"product",
+										"products",
+										"9",
+										""
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 10 Dec 2022 23:24:26 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.8.15"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		}
+	]
+}

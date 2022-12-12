@@ -1,0 +1,10 @@
+certifi==2022.12.7
+charset-normalizer==2.1.1
+colorlog==6.7.0
+dnspython==2.2.1
+idna==3.4
+peewee==3.15.4
+psycopg2-binary==2.9.5
+pymongo==4.3.3
+requests==2.28.1
+urllib3==1.26.13
