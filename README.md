@@ -25,4 +25,10 @@
 
    <br>
     
-##### 4. If you want to run the project in docker, the docker compose and docker file of each project is configured. 
+##### 4. If you want to run the project in docker, the docker compose and docker file of each project is configured.
+
+   <br>
+    
+##### tips:
+IS_DETAILED is a flag to run each crawler for work on list-view or detail-view mode.
+IS_DETAILED = True means crawl on detail views one by one and IS_DETAILED=False means crawl on list view of the target.
