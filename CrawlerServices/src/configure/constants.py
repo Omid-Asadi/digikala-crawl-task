@@ -10,3 +10,5 @@ TARGET_URL = "https://api.torob.com/v4/base-product/search/?category=243&sort=po
 STOP_FLAG = 'next'
 DETAIL_KEY = "more_info_url"
 
+SLEEP_TIME = os.environ.get('SLEEP_TIME')
+SLEEP_TIME_GET_LINKS_FROM_MONGO = os.environ.get('SLEEP_TIME_GET_LINKS_FROM_MONGO')
