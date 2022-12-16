@@ -2,8 +2,8 @@ FROM ubuntu:latest
 MAINTAINER Omid
 
 RUN apt update
-RUN apt upgrade -y
-RUN apt install apt-utils -y
+#RUN apt upgrade -y
+#RUN apt install apt-utils -y
 
 RUN mkdir /var/www/
 RUN mkdir /var/www/torob/
