@@ -7,7 +7,7 @@ from lib.base_model import BaseModel
 class Product(BaseModel):
     brand = models.CharField(_('brand'), max_length=255)
     minimum_market_price = models.BigIntegerField(_('minimum price'))
-    capacity = models.BigIntegerField(_('capacity'))
+    capacity = models.CharField(_('capacity'), max_length=255)
 
     class Meta:
         verbose_name = 'product'

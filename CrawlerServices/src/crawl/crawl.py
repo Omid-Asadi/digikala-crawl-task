@@ -106,11 +106,11 @@ def detail_extractor(url_objects, method='get', count=3):
                         export_dict_product.update({
 
                             'brand': result.get('structural_specs', {}).get('headers', [{}])[0].get('specs', {}).get(
-                                'برند', ''),
+                                'برند', result.get('attributes', {}).get('brand')),
 
                             'capacity':
                                 result.get('structural_specs', {}).get('headers', [{}])[0].get('specs', {}).get(
-                                    'ظرفیت درایو', ''),
+                                    'ظرفیت', result.get('attributes', {}).get('capacity')),
 
                             'minimum_market_price': result.get('price'),
                         })
@@ -118,7 +118,7 @@ def detail_extractor(url_objects, method='get', count=3):
                         product_id = product_setter(
                             brand=export_dict_product.get("brand", ''),
                             minimum_market_price=export_dict_product.get("minimum_market_price"),
-                            capacity=export_dict_product.get("minimum_market_price", '')),
+                            capacity=export_dict_product.get("capacity")),
 
                         process_log.info(f"['a new product row data has been inserted successfully!']") if product_id \
                             else None
@@ -144,7 +144,8 @@ def detail_extractor(url_objects, method='get', count=3):
                         if shop_id and product_id:
                             set_crawled_flag(link_id=url_object.get('_id'))
                             process_log.info(
-                                f"['a link for product ID {product_id} has been turned to crawled=True in mongoDB']")
+                                f"['a link for product for brand {export_dict_product.get('brand', '')} has been "
+                                f"turned to crawled=True in mongoDB']")
             return 'done'
     except Exception as e:
         process_log.info(f"['{str(e)}']")

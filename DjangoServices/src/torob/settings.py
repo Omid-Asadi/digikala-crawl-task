@@ -18,7 +18,6 @@ from .local_settings import SECRET_KEY, DEBUG, ALLOWED_HOSTS, DB_HOST, DB_NAME, 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
-
 INSTALLED_APPS = [
     'jet.dashboard',
     'jet',
@@ -72,14 +71,14 @@ WSGI_APPLICATION = 'torob.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        # 'ENGINE': 'django.db.backends.postgresql',
-        # 'HOST': DB_HOST,
-        # 'PORT': DB_PORT,
-        # 'NAME': DB_NAME,
-        # 'USER': DB_USER,
-        # 'PASSWORD': DB_PASS,
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'HOST': DB_HOST,
+        'PORT': DB_PORT,
+        'NAME': DB_NAME,
+        'USER': DB_USER,
+        'PASSWORD': DB_PASS,
     }
 }
 
