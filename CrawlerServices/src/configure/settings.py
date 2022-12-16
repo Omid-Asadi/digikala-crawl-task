@@ -1,9 +1,8 @@
 import os
 
-DB_NAME = os.getenv('DB_NAME')
-DB_USER = os.getenv('DB_USER')
-DB_PASS = os.getenv('DB_PASS')
-DB_HOST = os.getenv('DB_HOST')
-DB_PORT = os.getenv('DB_PORT')
-RUNNER = os.getenv('RUNNER')
-
+DB_NAME = 'torob'
+DB_USER = 'admin'
+DB_PASS = '123'
+DB_HOST = '127.0.0.1'
+DB_PORT = 5432
+RUNNER = True
