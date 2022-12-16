@@ -81,12 +81,12 @@ def is_crawling(data):
 def detail_extractor_manager():
     process_log.info(f"['detail_extractor_manager gets ready for getting data from mongo!']")
     url_objects = get_link_from_mongo()
-    if not len(list(url_objects)):
+    result = detail_extractor(url_objects)
+    if result == 'done':
         process_log.info(
             f"['detail_extractor_manager will sleep for the next {SLEEP_TIME_GET_LINKS_FROM_MONGO} minutes!']")
         time.sleep(SLEEP_TIME_GET_LINKS_FROM_MONGO * 60)
         return detail_extractor_manager()
-    detail_extractor(url_objects)
 
 
 def detail_extractor(url_objects, method='get', count=3):
@@ -145,7 +145,7 @@ def detail_extractor(url_objects, method='get', count=3):
                             set_crawled_flag(link_id=url_object.get('_id'))
                             process_log.info(
                                 f"['a link for product ID {product_id} has been turned to crawled=True in mongoDB']")
-
+            return 'done'
     except Exception as e:
         process_log.info(f"['{str(e)}']")
         return detail_extractor(url_objects, method=method, count=count - 1) if count > 0 else None
